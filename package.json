@@ -1,0 +1,47 @@
+{
+  "name": "trading.frontend",
+  "author": {
+    "name": "Gordon Tang",
+    "email": "gordon0908@gmail.com",
+    "url": "https://github.com/gordon0908"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "copy:files": "copyfiles --flat public/style/*.css dist/style && copyfiles --flat public/icons/*.png dist/icons && copyfiles --flat public/library/*.js dist/library",
+    "build": "webpack -p --config webpack.production.js && npm run copy:files",
+    "start": "webpack-dev-server --progress --open --config webpack.dev.js "
+  },
+  "dependencies": {
+    "d3fc-random-data": "^2.0.0",
+    "highcharts": "^6.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-highcharts": "^16.0.2",
+    "react-highstock": "^1.0.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copyfiles": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.12.1",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3"
+  }
+}
